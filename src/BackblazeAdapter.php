@@ -115,7 +115,7 @@ class BackblazeAdapter extends AbstractAdapter
      */
     public function readStream($path)
     {
-        $stream = Psr7\stream_for();
+        $stream = Psr7\Utils::streamFor();
         $download = $this->getClient()->download([
             'BucketId'   => $this->bucketId,
             'BucketName' => $this->bucketName,
